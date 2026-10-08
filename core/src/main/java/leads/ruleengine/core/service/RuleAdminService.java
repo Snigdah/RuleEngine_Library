@@ -134,7 +134,7 @@ public class RuleAdminService {
     }
 
     public List<RuleDefinition> list() {
-        return ruleDefinitionRepository.findAll();
+        return ruleDefinitionRepository.findByActiveTrue();   // live rules only; soft-deleted are hidden
     }
 
     /**
